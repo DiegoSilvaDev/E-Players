@@ -68,13 +68,17 @@ header img {
 }
 .partidas .container {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+}
+.proximas_partidas {
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-flow: wrap;
 }
 .partida {
     padding: 0 0 10px 0;
-
 }
 .partida img {
     width: 40px;
@@ -131,7 +135,7 @@ header img {
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    min-height: 700px;
+    min-height: 500px;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
     display: flex;
     justify-content: flex-end;
@@ -154,13 +158,13 @@ header img {
     position: absolute;
     z-index: 99;
     top: -20px;
-    left: 100px;
+    left: 200px;
     width: 100%;
     max-width: 35%;
 }
 .texto_sobre {
     width: 40%;
-    margin-right: 120px;
+    margin-right: 300px;
     text-align: right;
     text-shadow: 0px 3px 5px #000;
 }
@@ -357,6 +361,53 @@ select{
     margin-right: 0.5em;
 }
 .form_cadastro .campo:nth-child(10) button{
-    margin: auto;
+    margin: 2em auto;
 }
+/* Início responsividade  */
+/* 800px */
 
+@media(max-width: 800px){
+    .container {
+        width: 90%;
+    }
+    header .container img{
+        max-width: 180px;
+    }
+    .partidas .container {
+        align-items: flex-start;
+        flex-flow: nowrap;
+    }
+    .em_andamento {
+        width: 30%;
+    }
+    .proximas_partidas {
+        width: 70%;
+        flex-flow: wrap;
+    }
+    .ligas h4 {
+        font-size: 30px;
+    }
+    .ligas h3 {
+        font-size: 60px;
+    }
+    .ligas img {
+        height: 95px;
+    }
+    .sobre img {
+        max-width: 50%;
+        left: 20px;
+    }
+    .texto_sobre {
+        width: 50%;
+        margin-right: 30px;
+    }
+    .content {
+        margin-top: 30px;
+    }
+    .card img {
+        margin-top: 2.5em;
+        margin-left: 1em;
+    }
+}/*Fim média Query 800px*/
+
+ 
